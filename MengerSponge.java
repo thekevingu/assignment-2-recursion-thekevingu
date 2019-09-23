@@ -68,7 +68,7 @@ public class MengerSponge {
 
     private static void getMonkey() {
         try {
-            img = ImageIO.read(new File("Monkey.png"));
+            img = ImageIO.read(new File("src/Monkey.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
