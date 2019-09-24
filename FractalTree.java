@@ -45,12 +45,12 @@ public class FractalTree {
 
                 for (int l = 0; l < j; l++)
                     i += angleChanges[l];
-                
+
                 if (order - 1 == currentOrder)
                     StdDraw.setPenColor(StdDraw.BOOK_BLUE);
 
                 StdDraw.line(x, y, x + length * Math.cos(Math.toRadians(angle + i)), y + length * Math.sin(Math.toRadians(angle + i)));
-                drawTree(x + length * Math.cos(Math.toRadians(angle + i)), y + length * Math.sin(Math.toRadians(angle + i)), r.nextDouble() * length / 2, (int) r.nextDouble() * angle + i, order, currentOrder + 1, angleChanges, branches);
+                drawTree(x + length * Math.cos(Math.toRadians(angle + i)), y + length * Math.sin(Math.toRadians(angle + i)), length / 2, (int) r.nextDouble() * angle + i, order, currentOrder + 1, angleChanges, branches);
             }
         }
     }
