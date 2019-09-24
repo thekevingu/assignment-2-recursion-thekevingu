@@ -2,7 +2,6 @@ import edu.princeton.cs.algs4.*;
 
 /* KEVIN'S COINGAME.JAVA */
 public class CoinGame {
-    private static int counter = 0;
 
     public static void main(String[] args) {
         StdOut.println("Kevin's CoinGame.java\n");
@@ -20,6 +19,7 @@ public class CoinGame {
         StdOut.print(playCoinGame(coinNumber, 0) + " strategies.");
     }
 
+    /* PLAYS COIN GAME */
     private static int playCoinGame(int n, int player) {
         int total = 0;
         if (n >= 0) {
