@@ -14,6 +14,7 @@ public class SummingDigits {
         StdOut.println("that was anticlimactic...");
     }
 
+    /* FINDS SUM */
     private static int sum(int n) {
         if (n == 0)
             return n;
