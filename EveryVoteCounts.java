@@ -21,7 +21,8 @@ public class EveryVoteCounts {
         StdOut.print("N block has the following value: ");
         StdOut.println(ALL_BUT_N[blockIndex] + "\n");
 
-        StdOut.println("Critical vote possibilities for N: " + countCriticalVotesWrapperFunction(ALL_BUT_N, blockIndex));
+        StdOut.println("Critical vote possibilities for N method 1: " + countCriticalVotesWrapperFunction(ALL_BUT_N, blockIndex));
+        StdOut.println("Critical vote possibilities for N method 2: " + countCriticalVotesWrapperFunction2(ALL_BUT_N, blockIndex));
     }
 
     /* WRAPPER METHOD */
@@ -53,6 +54,26 @@ public class EveryVoteCounts {
             }
         }
         return total;
+    }
+
+    /* WRAPPER METHOD 2 */
+    private static int countCriticalVotesWrapperFunction2(int[] blocks, int blockIndex) {
+        int[] temp = new int[blocks.length - 1];
+        for (int i = 0; i < blocks.length; i++)
+            if (i < blockIndex)
+                temp[i] = blocks[i];
+            else if (i > blockIndex)
+                temp[i - 1] = blocks[i];
+        return countCriticalVotes2(temp, blocks[blockIndex], 0, 0, 0);
+    }
+
+    /* COUNT CRITICAL VOTE FUNCTION 2 */
+    private static int countCriticalVotes2(int[] blocks, int blockValue, int currentIndex, int currentSum, int critical) {
+        if (currentIndex == blocks.length) {
+            if (currentSum < THRESHOLD && currentSum + blockValue >= THRESHOLD) return critical + 1;
+        } else if (currentIndex < blocks.length)
+            return countCriticalVotes2(blocks, blockValue, currentIndex + 1, currentSum + blocks[currentIndex], critical) + countCriticalVotes2(blocks, blockValue, currentIndex + 1, currentSum, critical);
+        return 0;
     }
 
     /* RETURNS SUB-BLOCKS */
