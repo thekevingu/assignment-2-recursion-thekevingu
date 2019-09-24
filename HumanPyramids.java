@@ -25,6 +25,7 @@ public class HumanPyramids {
         StdOut.println("Normal: " + weightOnBack(row, col) + " in " + normalCount + " calls in " + (System.currentTimeMillis() - normalTime) + " ms.");
     }
 
+    /* MEMOIZATION */
     private static double weightOnBackButBetter(int row, int col, double[][] array) {
         memoizationCount++;
         double temp;
@@ -39,6 +40,7 @@ public class HumanPyramids {
         return array[row][col];
     }
 
+    /* WEIGHT ON BACK */
     private static double weightOnBack(int row, int col) {
         normalCount++;
         if (row <= 0)
