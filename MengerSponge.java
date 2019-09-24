@@ -36,6 +36,7 @@ public class MengerSponge {
         StdOut.println("\nCurious George!");
     }
 
+    /* SOLVE MENGERSPONGE */
     private static void solveSquare(double x, double y, double sideLength, int order, Color[][] monkeyArray) {
         if (order == 0) {
             StdOut.println("(" + (x + sideLength) + ", " + (y + sideLength) + ")");
@@ -56,6 +57,7 @@ public class MengerSponge {
         }
     }
 
+    /* GET MONKEY COLORS */
     private static Color[][] getMonkeyArray(BufferedImage img) {
         int width = img.getWidth();
         int height = img.getHeight();
@@ -66,6 +68,7 @@ public class MengerSponge {
         return monkeyArray;
     }
 
+    /* GETS MONKEY IMAGE */
     private static void getMonkey() {
         try {
             img = ImageIO.read(new File("src/Monkey.png"));
