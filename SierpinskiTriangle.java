@@ -26,6 +26,7 @@ public class SierpinskiTriangle {
         solveTriangle(X_COORDINATE, Y_COORDINATE, SIDE_LENGTH, order);
     }
 
+    /* DRAWS TRIANGLES */
     private static void solveTriangle(double x, double y, double sideLength, int order) {
         if (order == 0) {
             StdOut.println("(" + (x + 0.5 * sideLength) + ", " + (y + HEIGHT_CONSTANT * sideLength) + ")");
