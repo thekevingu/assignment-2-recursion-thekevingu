@@ -6,9 +6,9 @@ import edu.princeton.cs.algs4.*;
 public class EveryVoteCounts {
 
     /* BLOCK VALUES AND THRESHOLD */
-    private static final int[] ALL_BUT_N = new int[]{5, 2, 6, 7, 3, 4};
-    private static final int blockIndex = 4;
-    private static final int THRESHOLD = (IntStream.of(ALL_BUT_N).sum() + ALL_BUT_N[blockIndex]) / 2 + 1;
+    private static final int[] ALL_BUT_N = new int[]{4, 7, 2, 4};
+    private static final int blockIndex = 1;
+    private static final int THRESHOLD = IntStream.of(ALL_BUT_N).sum() / 2 + 1;
 
     /* MAIN METHOD */
     public static void main(String[] args) {
