@@ -21,6 +21,7 @@ public class FractalTree {
         StdOut.println("\nA tree was just generated.");
     }
 
+    /* DRAWS TREE */
     private static void drawTree(double x, double y, double length, int angle, int order, int currentOrder) {
         StdDraw.setPenColor(StdDraw.GRAY);
 
